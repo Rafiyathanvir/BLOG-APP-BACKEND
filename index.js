@@ -139,9 +139,7 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 
-app.get("/", (req, res) =>
-  res.send(`Server Active`)
-);
 
-app.listen(process.env.PORT || 4000)
+app.listen(4000);
+
 //
