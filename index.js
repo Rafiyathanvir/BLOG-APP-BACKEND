@@ -35,7 +35,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 mongoose.set('strictQuery', false);
 
@@ -74,6 +73,8 @@ app.post('/login', async (req,res) => {
     res.status(400).json('wrong credentials');
   }
 });
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
+
 
 app.get('/profile', (req,res) => {
   const {token} = req.cookies;
