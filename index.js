@@ -90,6 +90,8 @@ app.post('/logout', (req,res) => {
 });
 
 app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
+  app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
+
   const {originalname,path} = req.file;
   const parts = originalname.split('.');
   const ext = parts[parts.length - 1];
