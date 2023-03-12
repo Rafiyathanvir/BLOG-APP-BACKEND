@@ -1,9 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
+
 const mongoose = require("mongoose");
 const User = require('./models/User');
 const Post = require('./models/Post');
+
 const bcrypt = require('bcryptjs');
+
 const app = express();
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
@@ -21,7 +26,6 @@ const secret = 'asdfe45we45w345wegw345werjktjwertkj';
    //   origin: "*",
    // })
   //);
-app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 
 
