@@ -16,12 +16,12 @@ const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 //app.use(cors());
 //app.use(cors());
-app.use(
-    cors({
-      origin: "*",
-    })
-  );
-//app.use(cors({credentials:true,origin:'*'}));
+//app.use(
+  //  cors({
+   //   origin: "*",
+   // })
+  //);
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 
 
