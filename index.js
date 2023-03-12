@@ -34,6 +34,9 @@ app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
+
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
+
 mongoose.set('strictQuery', false);
 
 mongoose.connect('mongodb+srv://rafiyay:Rafiya1997@cluster0.rh3icif.mongodb.net/?retryWrites=true&w=majority');{
