@@ -1,15 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 
-app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 const mongoose = require("mongoose");
+
 const User = require('./models/User');
 const Post = require('./models/Post');
 
 const bcrypt = require('bcryptjs');
 
 const app = express();
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
+
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
