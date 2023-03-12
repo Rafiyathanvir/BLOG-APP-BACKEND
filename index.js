@@ -16,7 +16,7 @@ const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 //app.use(cors());
 //app.use(cors());
-app.use(cors({credentials:true,origin:'https://blog-app-backend-nu.vercel.app'}));
+app.use(cors({credentials:true,origin:'*'}));
 
 
 
