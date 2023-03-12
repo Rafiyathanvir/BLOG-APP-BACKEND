@@ -10,7 +10,6 @@ const Post = require('./models/Post');
 const bcrypt = require('bcryptjs');
 
 const app = express();
-app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
@@ -20,6 +19,7 @@ const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
+app.use(cors({credentials:true,origin:'https://moonlit-fairy-34c09e.netlify.app'}));
 
 //app.use(cors());
 //app.use(cors());
