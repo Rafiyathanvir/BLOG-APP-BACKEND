@@ -1,4 +1,21 @@
 {
+  
+  "name": "index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "15.7.0",
+    "npm": "7.4.3"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
